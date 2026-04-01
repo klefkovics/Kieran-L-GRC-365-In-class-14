@@ -1,40 +1,46 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Staatliches";
+  src: url(https://fonts.googleapis.com/css2?family=Staatliches&display=swap);
 }
 
 html {
   font-family: Helvetica, sans-serif;
   color: black;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 body {
   min-width: 500px;
   margin: auto;
-  background-color: #f3f7f8;
+  background-color: #dcc6c6;
 }
 
 header, footer{
   text-align: center;
   min-width: 500px;
-  height: 50px;
-  padding: 15px 0 30px 0;
-  background-color: #025159;
-  color: #FFFFFF;
+  height: auto;
+  padding: 5px 0 5px 0;
+  background-color: #751e1e;
+  color: #ffd35a;
 }
 
 .navLogo {
-  font-size: 2.9rem;
+  font-size: 3.5rem;
   font-weight: 700;
-  padding: 10px;
-  font-family: trilby, serif;
+  padding: 5px;
+  font-family: Staatliches, serif;
   font-weight: 900;
-  font-style: normal;
 }
 
 footer p {
   font-size: .8rem;
+  margin: 1.5rem 0;
 }
 
 img {
@@ -42,6 +48,55 @@ img {
   height: auto;
 }
 
-.bear {
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  grid-auto-rows: minmax(200px, 1fr);
+  gap: 1rem;
+  padding: 2rem 25%;
+  justify-content: center;
+}
+
+
+.car {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 2px solid #e9e9e9;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.icon {
+  color: #393939;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin: 0.5rem 0;
+}
+
+.icon img {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
+}
+
+.year em {
+  color: #751e1e;
+  font-weight: bold;
+}
+
+.description {
+  border-top: 1px solid #000000;
+  padding-top: 0.75rem;
+  line-height: 1.5;
+} 
+
+h2 {
+  font-family: Staatliches, sans-serif;
+  color: #751e1e;
+  margin-top: 0.5rem;
 }
